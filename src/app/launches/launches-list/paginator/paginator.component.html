@@ -1,0 +1,17 @@
+<div class="d-flex flex-row m-2">
+  <ng-container *ngFor="let button of _buttonsToDisplay">
+    <ng-container *ngIf="!!button.index; else dotsSeparator">
+      <button
+        (click)="button.index && onPageChangeClick(button.index)"
+        [ngClass]="{'paginator-button--selected': button.index === _currentPage}"
+        class="paginator-button paginator-button-font mr-2"
+      >
+        {{button.index || '...'}}
+      </button>
+    </ng-container>
+  </ng-container>
+</div>
+
+<ng-template #dotsSeparator>
+  <span class="mr-2">...</span>
+</ng-template>

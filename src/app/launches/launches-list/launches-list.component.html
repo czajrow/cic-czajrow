@@ -1,0 +1,11 @@
+<ng-container *ngIf="!!data, else noDataToDisplay">
+  <app-launches-table [launches]="data.items"></app-launches-table>
+  <app-paginator
+    [data]="data"
+    (pageChange)="pageChange($event)"
+  ></app-paginator>
+</ng-container>
+
+<ng-template #noDataToDisplay>
+  <p>No data to display!</p>
+</ng-template>

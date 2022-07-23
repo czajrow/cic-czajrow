@@ -1,0 +1,25 @@
+.paginator-button {
+  min-width: fit-content;
+  width: 2rem;
+  height: 2rem;
+
+  background: rgba(229, 229, 229, 0.5);
+  border-radius: 4px;
+  text-align: center;
+  border: none;
+
+  &--selected {
+    background: #2586BC;
+  }
+}
+
+
+
+.paginator-button-font {
+  font-family: 'Nunito', serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #2F3031;
+}

@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@ng-select/ng-select/themes/default.theme.css";
+
+@font-face {
+  font-family: "Nunito";
+  src: local("Nunito"), url(./assets/fonts/nunito.regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Nunito bold";
+  src: local("Nunito"), url(./assets/fonts/nunito.bold.ttf) format("truetype");
+}
