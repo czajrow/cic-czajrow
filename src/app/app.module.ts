@@ -10,6 +10,7 @@ import { LaunchesListComponent } from './launches/launches-list/launches-list.co
 import {HttpClientModule} from "@angular/common/http";
 import { LaunchesTableComponent } from './launches/launches-list/launches-table/launches-table.component';
 import { PaginatorComponent } from './launches/launches-list/paginator/paginator.component';
+import { FilterComponent } from './launches/launches-list/filter/filter.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { PaginatorComponent } from './launches/launches-list/paginator/paginator
     LaunchesListComponent,
     LaunchesTableComponent,
     PaginatorComponent,
+    FilterComponent,
   ],
   imports: [
     BrowserModule,

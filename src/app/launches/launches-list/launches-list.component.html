@@ -1,4 +1,8 @@
 <ng-container *ngIf="!!data, else noDataToDisplay">
+  <app-filter
+    [data]="data"
+    (filterChange)="filterChange($event)"
+  ></app-filter>
   <app-launches-table [launches]="data.items"></app-launches-table>
   <app-paginator
     [data]="data"

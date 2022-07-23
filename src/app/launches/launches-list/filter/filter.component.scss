@@ -1,0 +1,27 @@
+::ng-deep {
+  .filters {
+    .ng-select.custom {
+      width: 331px;
+
+      .ng-select-container {
+        background: rgba(37, 134, 188, 0.05);
+        border-radius: 4px;
+      }
+
+      .ng-value-label {
+        background: #2586BC;
+        border-radius: 4px;
+      }
+
+      .ng-placeholder {
+        font-family: 'Nunito', sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 19px;
+        color: rgba(37, 134, 188, 0.4);
+      }
+    }
+  }
+
+}

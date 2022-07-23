@@ -1,0 +1,13 @@
+<div class="filters mb-2 ml-4 mt-4">
+  <ng-select
+    [(ngModel)]="_filterValues"
+    [items]="_filterAllValues"
+    [multiple]="true"
+    [searchable]="true"
+    (change)="onFilterChange($event)"
+    bindLabel="name"
+    bindValue="id"
+    placeholder="Filter by location of element"
+    class="custom"
+  ></ng-select>
+</div>

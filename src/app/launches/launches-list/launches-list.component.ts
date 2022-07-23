@@ -11,7 +11,9 @@ import {tap} from "rxjs";
 export class LaunchesListComponent implements OnInit {
 
   public data: LaunchesList | null = null;
-  private limit: number = 10;
+  private _limit: number = 10;
+  private _currentPage: number = 1;
+  private _locationFilters: number[] = [];
 
   constructor(
     private readonly _launchesListClient: LaunchesListClient,
@@ -19,15 +21,22 @@ export class LaunchesListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.fetchData(13);
+    this.fetchData(this._currentPage, this._locationFilters);
   }
 
   public pageChange(index: number) {
-    this.fetchData(index);
+    this.fetchData(index, this._locationFilters);
   }
 
-  private fetchData(pageIndex: number) {
-    this._launchesListClient.getLaunches$(pageIndex, this.limit)
+  public filterChange(value: number[]) {
+    this.fetchData(1, value);
+  }
+
+  private fetchData(pageIndex: number, locationFilters: number[]) {
+    this._currentPage = pageIndex;
+    this._locationFilters = locationFilters;
+
+    this._launchesListClient.getLaunches$(pageIndex, this._limit, locationFilters)
       .pipe(tap(response => this.data = response))
       .subscribe();
   }
